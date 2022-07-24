@@ -1,0 +1,8 @@
+- Setup your AWS account - https://github.com/OmobaJesu/My-Intro-to-Terraform/blob/main/README.md#1-set-up-your-aws-account
+- Install Terraform
+- Deploy a single server
+- Deploy a single web server
+- Deploy a configurable web server
+- Deploy a cluster of web servers
+- Deploy a load balancer
+- Clean up
