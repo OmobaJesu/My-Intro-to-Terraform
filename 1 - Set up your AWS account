@@ -1,1 +1,23 @@
+Terraform can provision infrastructure across many different types of cloud providers, including AWS, Azure, Google Cloud, DigitalOcean, and many others. For this tutorial, we picked Amazon Web Services (AWS) because:
+
+It provides a huge range of reliable and scalable cloud hosting services, including Elastic Compute Cloud (EC2), Auto Scaling Groups (ASGs), and Elastic Load Balancing (ELB). If you find the AWS terminology confusing, be sure to check out AWS in Plain English.
+AWS is the most popular cloud infrastructure provider, by far.
+AWS offers a generous Free Tier which should allow you to run all of these examples for free.
+When you first register for AWS, you initially sign in as the root user. This user account has access permissions to everything, so from a security perspective, we recommend only using it to create other user accounts with more limited permissions (see IAM Best Practices). To create a more limited user account, head over to the Identity and Access Management (IAM) console, click “Users”, and click the blue “Create New Users” button. Enter a name for the user and make sure “Generate an access key for each user” is checked:
+
+
+
+Note: the IAM user page may look a bit different when you try it, but the basic idea of creating an IAM User is the same.
+Click the “Create” button and you’ll be able to see security credentials for that user, which consist of Access Key ID and a Secret Access Key. You MUST save these immediately, as they will never be shown again. We recommend storing them somewhere secure (e.g. a password manager such as Keychain or 1Password) so you can use them a little later in this tutorial.
+
+
+Save the credentials somewhere secure. Never share them with anyone. Don’t worry, the ones in the screenshot above are fake.
+Once you’ve saved the credentials, click “Close” (twice) and you’ll be taken to the list of users. Click on the user you just created and select the “Permissions” tab. By default, a new IAM user does not have permissions to do anything in the AWS account. To be able to use Terraform for the examples in this blog post series, add the following permissions (learn more about Managed IAM Policies here):
+
+AmazonEC2FullAccess: required for this blog post.
+AmazonS3FullAccess: required for How to manage Terraform state.
+AmazonDynamoDBFullAccess: required for How to manage Terraform state.
+AmazonRDSFullAccess: required for How to create reusable infrastructure with Terraform modules.
+CloudWatchFullAccess: required for Terraform tips & tricks: loops, if-statements, and pitfalls.
+IAMFullAccess: required for Terraform tips & tricks: loops, if-statements, and pitfalls.
 
