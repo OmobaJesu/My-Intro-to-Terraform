@@ -145,7 +145,7 @@ $ terraform apply
 (...)
 Terraform will perform the following actions:
 
-\# aws_instance.example will be created\
+# aws_instance.example will be created
   + resource "aws_instance" "example" {
       + ami                          = "ami-0c55b159cbfafe1f0"
       + arn                          = (known after apply)
@@ -214,7 +214,7 @@ $ terraform apply
 aws_instance.example: Refreshing state...
 (...)
 Terraform will perform the following actions:
-\# aws_instance.example will be updated in-place\
+# aws_instance.example will be updated in-place
 
   ~ resource "aws_instance" "example" {
         ami                          = "ami-0c55b159cbfafe1f0"
